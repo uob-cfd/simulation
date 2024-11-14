@@ -8,8 +8,7 @@ test = {
         {
           'code': r"""
           >>> # You need to set the value for 'p_total_21'
-          >>> 'p_total_21' in vars()
-          True
+          >>> assert 'p_total_21' in vars()
           """,
           'hidden': False,
           'locked': False
@@ -18,8 +17,7 @@ test = {
           'code': r"""
           >>> # You haven't changed the value for 'p_total_21'
           >>> # from its initial state (of ...)
-          >>> p_total_21 != ...
-          True
+          >>> assert p_total_21 != ...
           """,
           'hidden': False,
           'locked': False
@@ -32,8 +30,7 @@ test = {
           # per_n = (scores == 21).reshape((n, n)).sum(axis=1) / n
           # np.quantile(per_n , [0.001, 0.999])
           'code': r"""
-          >>> 0.071 < p_total_21 < 0.089
-          True
+          >>> assert 0.071 < p_total_21 < 0.089
           """,
           'hidden': False,
           'locked': False

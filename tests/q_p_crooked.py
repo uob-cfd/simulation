@@ -7,8 +7,7 @@ test = {
         {
           'code': r"""
           >>> # You need to set the value for 'p_crooked'
-          >>> 'p_crooked' in vars()
-          True
+          >>> assert 'p_crooked' in vars()
           """,
           'hidden': False,
           'locked': False
@@ -17,8 +16,7 @@ test = {
           'code': r"""
           >>> # You haven't changed the value for 'p_crooked'
           >>> # from its initial state (of ...)
-          >>> p_crooked is not ...
-          True
+          >>> assert p_crooked is not ...
           """,
           'hidden': False,
           'locked': False
@@ -28,8 +26,7 @@ test = {
           # res = np.sum(np.random.binomial(250, 0.5, (n, n)) >= 139, axis=1) / n
           # np.quantile(res, [0.001, 0.999])
           'code': r"""
-          >>> 0.037 < p_crooked < 0.051
-          True
+          >>> assert 0.037 < p_crooked < 0.051
           """,
           'hidden': False,
           'locked': False

@@ -8,8 +8,7 @@ test = {
         {
           'code': r"""
           >>> # You need to set the value for 'p_15_of_15'
-          >>> 'p_15_of_15' in vars()
-          True
+          >>> assert 'p_15_of_15' in vars()
           """,
           'hidden': False,
           'locked': False
@@ -18,8 +17,7 @@ test = {
           'code': r"""
           >>> # You haven't changed the value for 'p_15_of_15'
           >>> # from its initial state (of ...)
-          >>> p_15_of_15 != ...
-          True
+          >>> assert p_15_of_15 != ...
           """,
           'hidden': False,
           'locked': False
@@ -30,8 +28,7 @@ test = {
           # res = np.sum(np.random.binomial(15, 0.8, (n, n)) == 0, axis=1) / n
           # np.quantile(res, [0.001, 0.999])
           'code': r"""
-          >>> 0.029 < p_15_of_15 < 0.041
-          True
+          >>> assert 0.029 < p_15_of_15 < 0.041
           """,
           'hidden': False,
           'locked': False
